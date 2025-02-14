@@ -17,7 +17,7 @@ const Form = ({ setTicket }) => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    const ticketDetails = localStorage.getItem("userDetails");
+    const ticketDetails = localStorage.getItem("ticketDetails");
     if (!ticketDetails) {
       toast("Please select ticket type first")
       navigate("/");

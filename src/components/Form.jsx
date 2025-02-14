@@ -17,12 +17,13 @@ const Form = ({ setTicket }) => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    const userDetails = localStorage.getItem("userDetails");
-    if (!userDetails) {
+    const ticketDetails = localStorage.getItem("userDetails");
+    if (!ticketDetails) {
       toast("Please select ticket type first")
       navigate("/");
     }
-  })
+  }, [])
+
   const {
     register,
     handleSubmit,
